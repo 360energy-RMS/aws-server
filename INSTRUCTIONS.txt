@@ -1,0 +1,45 @@
+GUIDE FOR 360 RMS SERVER
+
+To start the server: 
+1: Right click the ps1 file named "START RMS SERVER" in the Desktop
+2: Click the "Run with Powershell" option
+
+A PowerShell window should pop up
+The expected output is as follows: 
+STARTING RMS SERVER...
+DO NOT CLICK INSIDE THIS WINDOW
+READY
+
+3. Minimize the Powershell window to avoid missclicks. DO NOT CLICK INSIDE WINDOW
+NOTE: If you click inside the window, please click inside it again, then press enter
+
+-------------------------------
+
+Expected output when a connection established with a 360 RMS Client:
+CONNECTED BY: ('Client's global IPv4 address', Source port #)
+DATA RECIEVED
+FILE WRITE SUCCESS
+READY
+
+-------------------------------
+
+RMS LOG:
+The RMS log is stored in the file directory: C:\Users\Administrator\Documents\RMS-DATA
+This file type is a XLSX, please use Microsoft Excel or Google Sheets to open
+DO NOT DELETE OR MOVE THIS LOG
+
+-------------------------------
+
+ERROR MESSAGES:
+"AN UNKNOWN CONNECTION WAS MADE": A connection was sent to the server that was not compatable with the
+current python socket configuration
+
+"CONNECTION DATA IS NOT VALID": The data sent to the server was not in a valid format or datatype
+Must be sent in bytes as: ID:(NUMBER),DATA:(NUMBER)
+This can be done by using the Python byte converter
+EXAMPLE: dataToBeSent = bytes("ID:360,DATA:123", "utf-8")
+
+"CONNECTION REQUEST IS NOT AUTHORIZED": The data sent to the server has an invalid ID
+Check the list of allowed IDs' in the VALIDATE_ID.py script
+
+If any concerns arise, please contact me at jivanb02@gmail.com or +1 978-333-3956
